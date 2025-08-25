@@ -2,3 +2,35 @@ body {
   font-family: sans-serif;
   margin: 2rem;
 }
+
+body { font-family: sans-serif; margin: 2rem; }
+.toolbar { max-width: 900px; margin: 0 auto 1rem; }
+#calendar { max-width: 900px; margin: 0 auto; }
+dialog form { display: grid; gap: .6rem; min-width: 280px; }
+dialog form label { display: grid; gap: .25rem; }
+dialog .actions { display: flex; gap: .5rem; justify-content: flex-end; }
+
+/* カレンダーの横幅を画面に合わせて広げる */
+#calendar{
+  width: min(95vw, 1200px);  /* 画面幅の95%か1200pxの小さい方 */
+  margin: 0 auto;
+}
+
+/* カレンダー全体の文字サイズを少し大きく */
+.fc {
+  font-size: 1.05rem; /* お好みで 1.1rem などに調整 */
+}
+
+.fc-daygrid-day-frame { padding: 6px; }
+
+/* 服用状態の色分け */
+.fc .is-taken {
+  background-color: #a7f3d0;   /* 薄い緑 */
+  border-color: #34d399;
+  color: #065f46;
+}
+.fc .is-not-taken {
+  /* デフォルト配色のままでもOK。少し薄くするなら↓ */
+  /* background-color: #eef2ff; border-color:#93c5fd; color:#1e3a8a; */
+}
+
