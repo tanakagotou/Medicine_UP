@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>薬管理アプリ</title>
+    <!-- FullCalendar の CSS 読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <!-- FullCalendar の JS 読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+        }
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>薬管理アプリ（カレンダー表示）</h1>
+    <div id="calendar"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth', // 月表示
+                locale: 'ja',                // 日本語表示
+                events: [
+                    { title: '朝の薬', start: '2025-08-25' },
+                    { title: '夜の薬', start: '2025-08-26' }
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
+
