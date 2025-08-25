@@ -1,9 +1,13 @@
+import os
 from flask import Flask
 
 def create_app():
-    app = Flask(__name__)
+    # __file__ = app/__init__.py のパス
+    app = Flask(
+        __name__,
+        template_folder=os.path.join(os.path.dirname(__file__), "templates"),
+        static_folder=os.path.join(os.path.dirname(__file__), "static")
+    )
 
-    from .routes import main
-    app.register_blueprint(main)
-
+    from . import routes
     return app
