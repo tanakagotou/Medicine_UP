@@ -29,8 +29,5 @@ dialog .actions { display: flex; gap: .5rem; justify-content: flex-end; }
   border-color: #34d399;
   color: #065f46;
 }
-.fc .is-not-taken {
-  /* デフォルト配色のままでもOK。少し薄くするなら↓ */
-  /* background-color: #eef2ff; border-color:#93c5fd; color:#1e3a8a; */
-}
+
 
